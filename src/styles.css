@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    color: #464050;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: 'Rammetto One', serif;
+    margin: 70px 0 0 0;
+    font-size: 50px;
+    text-shadow: 3px 5px 5px #ebe8ef;
+}
+.worldMapContainer{
+    width: 90%;
+}
+.worldMapImg{
+    width: 100%;
+    margin-top: 0;
+}
+
+.countryListContainer{
+    height: 800px;
+    width: 70vw;
+    background-color: #e7e4ea;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px #ebe8ef;
+    margin-bottom: 50px;
+    padding: 40px;
+}
+
+#countryList{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.countrySummary{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+}
+.summaryTopRow{
+    display: flex;
+    align-items: center;
+}
+.countryFlag{
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+.countryName{
+    font-size: 20px;
+    font-family: "Roboto Condensed", serif;
+    margin: 0;
+}
+.countryPopulation{
+    font-size: 10px;
+    font-family: "Roboto Condensed", serif;
+    color: #75717c;
+    margin: 5px 0 0 0;
+}
+.populationNumber{
+    font-weight: bold;
+}
+
+/*-------------Continent Colors-------------*/
+.europe{color: #d89b0b}
+.asia{color: #a72a35}
+.africa{color: #365fb8}
+.nAmerica{color: #307952}
+.sAmerica{color: #7dad28}
+.oceania{color: #a86aa9}
