@@ -18,7 +18,7 @@ function listCountries(countryLibrary, uiElement){
         uiElement.innerHTML += `
         <div class="countrySummary">
             <div class="summaryTopRow">
-                <img class="countryFlag" src=${country.flags.svg} alt="flag">
+                <img class="countryFlag" src=${antarticaDeservesItsProperFlag(country)} alt="flag">
                 <h4 class="countryName ${getContinent(country)}">${country.name.common}</h4>
             </div>
             <p class="countryPopulation">has a population of <span class="populationNumber">${country.population}</span> people</p>
@@ -27,11 +27,15 @@ function listCountries(countryLibrary, uiElement){
     })
 }
 
+function antarticaDeservesItsProperFlag(country){
+    if (country.name.common === "Antarctica") return "https://upload.wikimedia.org/wikipedia/commons/f/f8/True_South_Antarctic_Flag.svg"
+    else return country.flags.svg;
+}
+
 function getContinent(country){
     if (country.region.toLowerCase() === "americas"){
-        if (country.subregion.toLowerCase() === "South America"){
-            return "sAmerica";
-        }
+        if (country.subregion.toLowerCase() === "south america") return "sAmerica";
+
         else return "nAmerica";
     }
     else return country.region.toLowerCase();
@@ -41,7 +45,9 @@ const countryListElement = document.getElementById('countryList')
 async function fetchCountries() {
     try {
         const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,subregion')
-        console.log(response.data)
+        response.data.sort((a, b) => {
+         if (a.population > b.population) return 1;
+        });
         listCountries(response.data, countryListElement);
 
     } catch (e){

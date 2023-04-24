@@ -22,20 +22,22 @@ h1{
 }
 
 .countryListContainer{
-    height: 800px;
     width: 70vw;
     background-color: #e7e4ea;
     border-radius: 10px;
     box-shadow: 3px 5px 10px #ebe8ef;
     margin-bottom: 50px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #countryList{
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
     flex-wrap: wrap;
+    height: 9750px;
     margin: 0;
     padding: 0;
 }
@@ -49,6 +51,7 @@ h1{
     display: flex;
     align-items: center;
 }
+
 .countryFlag{
     height: 30px;
     margin: 0 10px 0 0;
@@ -72,6 +75,6 @@ h1{
 .europe{color: #d89b0b}
 .asia{color: #a72a35}
 .africa{color: #365fb8}
-.nAmerica{color: #307952}
-.sAmerica{color: #7dad28}
+.nAmerica{color: #22815d}
+.sAmerica{color: #709c2e}
 .oceania{color: #a86aa9}

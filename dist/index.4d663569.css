@@ -26,18 +26,19 @@ h1 {
 }
 
 .countryListContainer {
-  height: 800px;
   width: 70vw;
   background-color: #e7e4ea;
   border-radius: 10px;
+  flex-flow: column wrap;
   margin-bottom: 50px;
   padding: 40px;
+  display: flex;
   box-shadow: 3px 5px 10px #ebe8ef;
 }
 
 #countryList {
+  height: 9750px;
   flex-flow: column wrap;
-  flex-basis: 100%;
   margin: 0;
   padding: 0;
   display: flex;
@@ -90,11 +91,11 @@ h1 {
 }
 
 .nAmerica {
-  color: #307952;
+  color: #22815d;
 }
 
 .sAmerica {
-  color: #7dad28;
+  color: #709c2e;
 }
 
 .oceania {
