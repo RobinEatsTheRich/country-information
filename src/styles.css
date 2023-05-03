@@ -78,3 +78,34 @@ h1{
 .nAmerica{color: #22815d}
 .sAmerica{color: #709c2e}
 .oceania{color: #a86aa9}
+
+
+.searchForm{
+    height: 60px;
+    width: 500px;
+    margin: 30px;
+    border: 2px #464050 solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchForm input{
+    border: 0;
+    width: 300px;
+    margin-left: 15px;
+    background: none;
+    font-size: 13px;
+    font-weight: normal;
+}
+.searchForm button{
+    border: 0;
+    height: 100%;
+    width: 150px;
+    border-radius: 0 25px 25px 0;
+    background-color: #e7e4ea;
+    font-size: 13px;
+    color: white;
+}
+.search-form button:hover{color:#899CA0}
+.search-form button:active{background-color: #5e919dFF; color:#899CA0}

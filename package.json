@@ -5,8 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel src/countrySearch.html",
+    "build": "parcel build src/countrySearch.html"
   },
   "author": "",
   "license": "ISC",
