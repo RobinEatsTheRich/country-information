@@ -40,7 +40,6 @@ import axios from "axios";
 //     })
 // }
 function displayInfo(countryLibrary, countryQuery, uiElement) {
-    console.log(`Searching...`)
     const country = countryLibrary.find(obj => {
         return obj.name.common.toLowerCase() === countryQuery.toLowerCase()
     })
@@ -94,7 +93,6 @@ function antarcticaDeservesItsProperFlag(country){
 function getContinent(country){
     if (country.region.toLowerCase() === "americas"){
         if (country.subregion.toLowerCase() === "south america") return "sAmerica";
-
         else return "nAmerica";
     }
     else return country.region.toLowerCase();
@@ -129,7 +127,6 @@ function languageSemantics(country){
 const countryDisplayElement = document.getElementById('countryDisplay')
 const textElement = document.getElementById('countryQueryText')
 async function fetchCountries() {
-    console.log(`Fetching Countries...`)
     try {
         const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,subregion,capital,currencies,languages')
         response.data.sort((a, b) => {
