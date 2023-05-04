@@ -2,16 +2,11 @@
     box-sizing: border-box;
     color: #464050;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 h1{
     font-family: 'Rammetto One', serif;
     margin: 70px 0 0 0;
     font-size: 50px;
-    text-shadow: 3px 5px 5px #ebe8ef;
+    text-shadow: 3px 5px 5px #eec781;
 }
 .worldMapContainer{
     width: 90%;
@@ -25,7 +20,7 @@ h1{
     width: 70vw;
     background-color: #e7e4ea;
     border-radius: 10px;
-    box-shadow: 3px 5px 10px #ebe8ef;
+    box-shadow: 3px 5px 10px #eec781;
     margin-bottom: 50px;
     padding: 40px;
     display: flex;
@@ -50,14 +45,15 @@ h1{
 .summaryTopRow{
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .countryFlag{
-    height: 30px;
+    height: 40px;
     margin: 0 10px 0 0;
 }
 .countryName{
-    font-size: 20px;
+    font-size: 50px;
     font-family: "Roboto Condensed", serif;
     margin: 0;
 }
@@ -80,12 +76,38 @@ h1{
 .oceania{color: #a86aa9}
 
 
+/*------------------------------------------Search Page------------------------------------------*/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 500px;
+    background-color: #faecb6;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 0;
+}
+.title h1{
+    margin: 0;
+    height: 70px;
+}
+.title p{
+    margin: 0;
+}
+
 .searchForm{
     height: 60px;
     width: 500px;
     margin: 30px;
     border: 2px #464050 solid;
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,17 +117,57 @@ h1{
     width: 300px;
     margin-left: 15px;
     background: none;
-    font-size: 13px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: lighter;
 }
 .searchForm button{
     border: 0;
     height: 100%;
     width: 150px;
-    border-radius: 0 25px 25px 0;
-    background-color: #e7e4ea;
-    font-size: 13px;
+    border-radius: 0 19px 19px 0;
+    background-color: #de7f65;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
 }
-.search-form button:hover{color:#899CA0}
-.search-form button:active{background-color: #5e919dFF; color:#899CA0}
+.searchForm button:hover{background-color: #e4956f;}
+.searchForm button:active{background-color: #d17462;}
+
+.displayContainer{
+    width: 50vw;
+    background-color: #e9e7de;
+    border-radius: 10px;
+    border: 2px #464050 solid;
+    box-shadow: 3px 5px 10px #eec781;
+    margin-bottom: 50px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.displayContainer p{
+    margin: 0 0 8px 0;
+}
+
+.errorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    background-color: #c1414e;
+    border-radius: 10px;
+    border: 2px #464050 solid;
+    box-shadow: 3px 5px 10px #eec781;
+    margin-bottom: 50px;
+    padding: 40px;
+}
+.errorContainer h3{
+    font-size: 30px;
+    font-family: "Roboto Condensed", serif;
+    margin: 0 0 10px 0;
+    color: white;
+}
+.errorContainer p{
+    margin: 0;
+    color: white;
+}

@@ -44,10 +44,23 @@ function displayInfo(countryLibrary, countryQuery, uiElement) {
     const country = countryLibrary.find(obj => {
         return obj.name.common.toLowerCase() === countryQuery.toLowerCase()
     })
-        if (country){
-            console.log(country)
-            uiElement.innerHTML = `
-                <div class="displayContainer">
+    if (countryQuery.toLowerCase() === "antarctica"){
+        uiElement.innerHTML = `
+            <div class="displayContainer">
+                <div class="summaryTopRow">
+                    <img class="countryFlag" src=${antarcticaDeservesItsProperFlag(country)} alt="flag">
+                    <h3 class="countryName ${getContinent(country)}">${country.name.common}</h3>
+                </div>
+                <div class="summaryBottomRow">
+                    <p>${country.name.common} is situated in the ${country.region}. It has a population of ${country.population} people.</p>
+                    <p>Used mostly as a research basis they have neither an official capital, currency, nor language.</p>
+                </div>            
+            </div>    
+        `
+    }
+    else if (country){
+        uiElement.innerHTML = `
+            <div class="displayContainer">
                 <div class="summaryTopRow">
                     <img class="countryFlag" src=${antarcticaDeservesItsProperFlag(country)} alt="flag">
                     <h3 class="countryName ${getContinent(country)}">${country.name.common}</h3>
@@ -57,17 +70,21 @@ function displayInfo(countryLibrary, countryQuery, uiElement) {
                     <p>Their capital is ${country.capital} and you can pay with ${currencySemantics(country)}.</p>
                     <p>The inhabitants speak ${languageSemantics(country)}.</p>                
                 </div>            
-                </div>    
-            `
-        }
-        else {
-        uiElement.innerHTML = `
-            <div class="errorContainer">
-                <h3>No results found :(</h3>
-                <p>Looks like "${countryQuery}" is not in our system</p>
             </div>    
-        `;
-        }
+        `
+    }
+    else if (countryQuery === ""){
+        uiElement.innerHTML = `   
+    `;
+    }
+    else {
+    uiElement.innerHTML = `
+        <div class="errorContainer">
+            <h3>No results found :(</h3>
+            <p>Looks like "${countryQuery}" is not in our system</p>
+        </div>    
+    `;
+    }
 }
 function antarcticaDeservesItsProperFlag(country){
     if (country.name.common === "Antarctica") return "https://upload.wikimedia.org/wikipedia/commons/f/f8/True_South_Antarctic_Flag.svg"
@@ -86,10 +103,9 @@ function currencySemantics(country){
     const currencyArray = Object.values(country.currencies);
     let returnString = `${currencyArray[0].name}s`;
     for (let i = 0; i < currencyArray.length; i++) {
-        if (i !== 0 && i === (currencyArray.length-1)){
+        if (i !== 0 && i === (currencyArray.length - 1)) {
             returnString += ` and ${currencyArray[i].name}s`;
-        }
-        else if (i !== 0 && i <(currencyArray.length)){
+        } else if (i !== 0 && i < (currencyArray.length)) {
             returnString += `, ${currencyArray[i].name}s`;
         }
     }
@@ -100,10 +116,9 @@ function languageSemantics(country){
     console.log(languageArray)
     let returnString = `${languageArray[0]}`;
     for (let i = 0; i < languageArray.length; i++) {
-        if (i !== 0 && i === (languageArray.length-1)){
+        if (i !== 0 && i === (languageArray.length - 1)) {
             returnString += ` and ${languageArray[i]}`;
-        }
-        else if (i !== 0 && i <(languageArray.length)){
+        } else if (i !== 0 && i < (languageArray.length)) {
             returnString += `, ${languageArray[i]}`;
         }
     }
