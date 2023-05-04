@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  color: #464050;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+h1 {
+  text-shadow: 3px 5px 5px #ebe8ef;
+  margin: 70px 0 0;
+  font-family: Rammetto One, serif;
+  font-size: 50px;
+}
+
+.worldMapContainer {
+  width: 90%;
+}
+
+.worldMapImg {
+  width: 100%;
+  margin-top: 0;
+}
+
+.countryListContainer {
+  width: 70vw;
+  background-color: #e7e4ea;
+  border-radius: 10px;
+  flex-flow: column wrap;
+  margin-bottom: 50px;
+  padding: 40px;
+  display: flex;
+  box-shadow: 3px 5px 10px #ebe8ef;
+}
+
+#countryList {
+  height: 9750px;
+  flex-flow: column wrap;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.countrySummary {
+  width: 40%;
+  flex-direction: column;
+  margin: 0 0 30px;
+  display: flex;
+}
+
+.summaryTopRow {
+  align-items: center;
+  display: flex;
+}
+
+.countryFlag {
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+
+.countryName {
+  margin: 0;
+  font-family: Roboto Condensed, serif;
+  font-size: 20px;
+}
+
+.countryPopulation {
+  color: #75717c;
+  margin: 5px 0 0;
+  font-family: Roboto Condensed, serif;
+  font-size: 10px;
+}
+
+.populationNumber {
+  font-weight: bold;
+}
+
+.europe {
+  color: #d89b0b;
+}
+
+.asia {
+  color: #a72a35;
+}
+
+.africa {
+  color: #365fb8;
+}
+
+.nAmerica {
+  color: #22815d;
+}
+
+.sAmerica {
+  color: #709c2e;
+}
+
+.oceania {
+  color: #a86aa9;
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
