@@ -111,7 +111,6 @@ function currencySemantics(country){
 }
 function languageSemantics(country){
     const languageArray = Object.values(country.languages);
-    console.log(languageArray)
     let returnString = `${languageArray[0]}`;
     for (let i = 0; i < languageArray.length; i++) {
         if (i !== 0 && i === (languageArray.length - 1)) {
@@ -132,10 +131,8 @@ async function fetchCountries() {
         response.data.sort((a, b) => {
          if (a.population > b.population) return 1;
         });
-        //listCountries(response.data, countryListElement);
+        //listCountries(response.data, countryListElement); (This is for the first assignment)
         displayInfo(response.data, textElement.value, countryDisplayElement);
-        console.log(`textElement = ${textElement} and its contents are ${textElement.value}`)
-        console.log(`Fetched Countries`)
 
     } catch (e){
         console.error(e)
@@ -147,6 +144,5 @@ buttonElement.addEventListener('submit', submitForm);
 
 function submitForm(e){
     e.preventDefault();
-    console.log("event listener activated")
     fetchCountries();
 }
